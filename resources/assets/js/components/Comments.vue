@@ -123,7 +123,7 @@
                     'X-Requested-With': 'XMLHttpRequest',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 };
-                this.$commonHelper.postAxios(`vote`, data).then(({ data }) => {
+                this.$commonHelper.postAxios(`vote`, data, true).then(data => {
                     if (data.flag == 1) {
                         if (data.vote == 1) {
                             $('#comment-' + item_id + '-like').removeClass('outline');

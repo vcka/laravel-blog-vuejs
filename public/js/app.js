@@ -30836,9 +30836,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded'
             };
-            this.$commonHelper.postAxios('vote', data).then(function (_ref) {
-                var data = _ref.data;
-
+            this.$commonHelper.postAxios('vote', data, true).then(function (data) {
                 if (data.flag == 1) {
                     if (data.vote == 1) {
                         $('#comment-' + item_id + '-like').removeClass('outline');
@@ -30869,8 +30867,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 'Content-Type': 'application/x-www-form-urlencoded'
             };
 
-            this.$commonHelper.postAxios('vote?token=' + this.getAccessToken, data).then(function (_ref2) {
-                var data = _ref2.data;
+            this.$commonHelper.postAxios('vote?token=' + this.getAccessToken, data).then(function (_ref) {
+                var data = _ref.data;
             });
         },
         replyBox: function replyBox() {
@@ -31253,15 +31251,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 postId: postId
             };
 
-            var headers = {
-                'X-CSRF-Token': _token,
-                'X-Requested-With': 'XMLHttpRequest',
-                'Content-Type': 'application/x-www-form-urlencoded'
-            };
-
-            this.$commen.postAxios('like?token=' + this.getAccessToken, data).then(function (_ref) {
-                var data = _ref.data;
-
+            this.$commonHelper.postAxios('like', data, true).then(function (data) {
                 if (typeof data.response_code !== 'undefined') {
                     if (parseInt(data.response_code) === 200) {
                         $('#likeit' + postId).html(data.likes);

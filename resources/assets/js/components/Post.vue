@@ -89,15 +89,9 @@
                 var postId = currentTarget.getAttribute('data-postid');
                 var data = {
                     postId: postId
-                };
+                };                
 
-                var headers = {
-                    'X-CSRF-Token': _token,
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                };
-
-                this.$commen.postAxios(`like?token=${this.getAccessToken}`, data).then(({ data }) => {
+                this.$commonHelper.postAxios(`like`, data, true).then(data => {
                     if (typeof data.response_code !== 'undefined') {
                         if (parseInt(data.response_code) === 200) {
                             $('#likeit' + postId).html(data.likes);

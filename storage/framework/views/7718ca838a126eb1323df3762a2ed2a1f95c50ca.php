@@ -60,9 +60,9 @@ $polyfills = [
         <script src="<?php echo e(asset('user/vendor/jquery/jquery.min.js')); ?>"></script>        
         <script src="<?php echo e(asset('user/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
         <?php else: ?>
-        <!--script src="<?php echo e(mix('js/manifest.js')); ?>"></script>
-        <!--script src="<?php echo e(mix('js/vendor.js')); ?>"></script-->
         <script src="<?php echo e(mix('js/app.js')); ?>"></script>
+        <script src="<?php echo e(asset('user/vendor/jquery/jquery.min.js')); ?>"></script>        
+        <script src="<?php echo e(asset('user/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
         <?php endif; ?>
     </body>
 </html>

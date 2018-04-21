@@ -5,7 +5,6 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Model\user\post;
 use App\Http\Controllers\Controller;
-use App\Model\user\category_post;
 use App\Traits\PostTransformData;
 
 class ArchivePostController extends Controller {

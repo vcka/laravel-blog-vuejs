@@ -159,7 +159,7 @@
                 var self = this;
                 if (this.isValid() === 0) {
                     
-                    this.$commonHelper.postAxios(`register`, this.registerFormData).then(({ data }) => {
+                    this.$commonHelper.postAxios(`register`, this.registerFormData).then(data => {
                         if (data.response_code === 201) {
                             self.displayErrors(data.errors);
                         } else if (data.response_code === 200) {

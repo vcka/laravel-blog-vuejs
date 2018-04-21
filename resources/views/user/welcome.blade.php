@@ -60,9 +60,9 @@ $polyfills = [
         <script src="{{ asset('user/vendor/jquery/jquery.min.js') }}"></script>        
         <script src="{{ asset('user/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         @else
-        <!--script src="{{ mix('js/manifest.js') }}"></script>
-        <!--script src="{{ mix('js/vendor.js') }}"></script-->
         <script src="{{ mix('js/app.js') }}"></script>
+        <script src="{{ asset('user/vendor/jquery/jquery.min.js') }}"></script>        
+        <script src="{{ asset('user/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         @endif
     </body>
 </html>
